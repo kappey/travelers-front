@@ -1,0 +1,18 @@
+<div class="container-fluid">
+    <div class="row align-items-center home-banner">
+        <div class="topProfile">
+            <div *ngIf="traveler">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{{traveler.firstName}} {{traveler.lastName}}</h5>
+                        <p class="card-text">{{traveler.currentPosition}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row align-items-center">
+        <app-posts></app-posts>
+    </div>
+</div>

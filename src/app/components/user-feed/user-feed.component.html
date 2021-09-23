@@ -1,0 +1,22 @@
+<button (click)="onSignOut()" type="submit" class="btn form-control btn-round">Sign Out</button>
+
+<div class="my-google-map">
+    <google-map [options]="options"></google-map>
+</div>
+<!-- 
+<div *ngFor="let item of testObject | keyvalue">
+    Key: <b>{{item.key}}</b> and Value: <b>{{item.value}}</b>
+</div> -->
+
+
+
+<div *ngFor="let traveler of travelers">
+    <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{traveler.firstName}} {{traveler.lastName}}</h5>
+            <p class="card-text">{{traveler.currentPosition}}</p>
+            <a routerLink='/profile/{{traveler._id}}' class="btn btn-primary">Check Profile</a>
+        </div>
+    </div>
+</div>
